@@ -11,7 +11,7 @@
 ## 📦 安装
 
 ```bash
-go install github.com:lanshipeng/gorm-gen@latest
+go install github.com/lanshipeng/gorm-gen@latest
 ```
 
 ## 🔧 使用方式
