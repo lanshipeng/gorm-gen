@@ -105,13 +105,6 @@ func run(cmd *cobra.Command, args []string) {
 
 	aliasMap := parseAliasModels(aliasModels)
 
-	// time 类型统一生成指针
-	cg.WithDataTypeMap(map[string]func(columnType gorm.ColumnType) string{
-		"timestamp": func(c gorm.ColumnType) string { return "*time.Time" },
-		"datetime":  func(c gorm.ColumnType) string { return "*time.Time" },
-		"date":      func(c gorm.ColumnType) string { return "*time.Time" },
-	})
-
 	for _, table := range tables {
 		cg.collectDeprecatedColumns(db, table)
 		cg.WithOpts(gen.FieldIgnore(cg.ignoredColumns...))
