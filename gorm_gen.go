@@ -98,9 +98,10 @@ func run(cmd *cobra.Command, args []string) {
 	})
 
 	cg.UseDB(db)
-	cg.WithOpts(gen.FieldJSONTagWithNS(func(columnName string) (tagContent string) {
-		return strcase.ToLowerCamel(columnName)
-	}))
+	// 默认蛇型
+	// cg.WithOpts(gen.FieldJSONTagWithNS(func(columnName string) (tagContent string) {
+	// 	return strcase.ToLowerCamel(columnName)
+	// }))
 	cg.WithOpts(gen.FieldType("deleted", "bool"))
 
 	aliasMap := parseAliasModels(aliasModels)
