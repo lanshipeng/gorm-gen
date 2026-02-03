@@ -18,26 +18,26 @@ go install github.com/lanshipeng/gorm-gen@latest
 
 - 单表生成
 ```bash
-gorm-gen -d "mysql://root:123456@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local" -t tag -o "yourpath"
+gorm-gen -d "root:123456@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local" -t tag -o "yourpath"
 ```
 - 多表生成
 ```bash
-gorm-gen -d "mysql://root:123456@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local" -t tag -t ban_rules -o "yourpath"
+gorm-gen -d "root:123456@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local" -t tag -t ban_rules -o "yourpath"
 ```
 
 - db下所有表生成
 ```bash
-gorm-gen -d "mysql://root:123456@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local" -o "yourpath"
+gorm-gen -d "root:123456@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local" -o "yourpath"
 ```
 
 - 指定表中字段生成i18n tag
 ```bash
-gorm-gen -d "mysql://root:123456@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local" -t tag -t ban_rules -o "yourpath" -i tag.name -i ban_rules.name
+gorm-gen -d "root:123456@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local" -t tag -t ban_rules -o "yourpath" -i tag.name -i ban_rules.name
 ```
 
 - 指定生成的结构体名称
 ```bash
-gorm-gen -d "mysql://root:123456@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local" -t tag -t ban_rules -o "yourpath" -a tag=OpTag -a ban_rules=OpBanRules
+gorm-gen -d "root:123456@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local" -t tag -t ban_rules -o "yourpath" -a tag=OpTag -a ban_rules=OpBanRules
 ```
 
 ## 🧱 命令结构
